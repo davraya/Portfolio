@@ -160,6 +160,24 @@ section a {
   max-width: 600px;
 }
 
+h3{
+text-align: left;
+padding: 20px 0px 0px 0px;
+}
+
+ul{
+  list-style-position: inside;
+
+}
+
+ul li{
+  list-style-type: circle;
+  text-align: left;
+  margin-left: 0; /* Reset any default margin */
+  padding-left: 20px; /* Adjust the padding to your desired value */
+  text-indent: -23px; /* Use negative text-indent to align the text with the first line */
+}
+
 /* Grid Styles */
 .grid-col-2 {
   display: grid;
