@@ -106,12 +106,12 @@ text-align: left;
 padding: 20px 0px 0px 0px;
 }
 
-ul {
+.detail-box ul {
   padding-left: 20px; /* Controls distance between the bullet and text */
   list-style-position: outside; /* Keeps the bullets outside of the list */
 }
 
-li {
+.detail-box ul li {
   margin-bottom: 10px; /* Adds spacing between items */
   list-style-type: disc; /* Default bullet type, you can change it */
   text-align: left;
