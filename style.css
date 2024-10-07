@@ -18,6 +18,8 @@ body {
   line-height: 1.4;
   color: #000;
   background-color: #222426;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 a {
@@ -65,12 +67,6 @@ section a {
   margin-right: 20px;
 }
 
-.divider {
-  width: 95%;
-  height: 1px;
-  background-color: #ccc;
-  margin: 40px auto;
-}
 
 /* Box */
 .box {
@@ -270,9 +266,6 @@ li {
 }
 
 @media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
 
   .grid-col-2 {
     grid-template-columns: 1fr;
@@ -282,15 +275,6 @@ li {
     order: 0;
   }
 
-  .navbar-brand img {
-    width: 40px;
-    height: 40px;
-  }
-
-  .navbar .navbar-nav-left,
-  .navbar .navbar-nav-right {
-    display: none;
-  }
 
   .footer {
     text-align: center;
@@ -302,9 +286,5 @@ li {
     max-width: 1440px;
     margin-right: auto;
     margin-left: auto;
-  }
-
-  .divider {
-    max-width: 90%;
   }
 }
