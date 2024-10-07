@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
 :root {
-  --color-primary: #68B684;
-  --color-secondary: #094d92;
+  --color-primary: #222831;
+  --color-secondary: #344955;
   --color-extra: #d4e9e2;
 }
 
@@ -17,15 +17,14 @@ body {
   font-family: 'Open Sans', sans-serif;
   line-height: 1.4;
   color: #000;
+  background-color: #222426;
 }
 
 a {
   color: #000;
 }
 
-ul {
-  list-style: none;
-}
+
 
 p {
   margin: 5px 0;
@@ -40,68 +39,7 @@ section a {
   color: #fff;
 }
 
-/* Navbar */
-.navbar {
-  width: 100%;
-  height: auto;
-  background-color: #fff;
-  padding: 20px;
-  box-shadow: 0 1px 3px rgb(0 0 0 / 10%), 0 2px 2px rgb(0 0 0 / 6%),
-    0 0 2px rgb(0 0 0 / 7%);
-}
 
-.navbar-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1440px;
-  margin: 0 auto;
-}
-
-.navbar ul {
-  display: flex;
-  align-items: center;
-}
-
-.navbar li {
-  margin: 0 15px;
-  font-weight: bold;
-}
-
-.navbar a {
-  color: #000;
-  text-decoration: none;
-}
-
-.navbar a:hover {
-  color: var(--color-primary);
-}
-
-.navbar-brand img {
-  width: 50px;
-  height: 50px;
-}
-
-.navbar-nav-left {
-  text-transform: uppercase;
-  flex: 1;
-  margin-left: 20px;
-}
-
-.navbar-nav-right li:first-child a {
-  display: flex;
-  align-items: center;
-}
-
-.navbar-nav-right img {
-  height: 20px;
-  width: 20px;
-  margin-right: 10px;
-}
-
-.navbar-nav-right li:nth-child(2) {
-  margin: 0 5px;
-}
 
 /* Footer & Social */
 .footer-container {
@@ -137,10 +75,12 @@ section a {
 /* Box */
 .box {
   margin-bottom: 30px;
+  border-radius: 15px;
+  padding: 20px;
 }
 
 .box-inner {
-  max-width: 700px;
+  max-width: 90%;
   margin: 0 auto;
 }
 
@@ -159,23 +99,26 @@ section a {
 .box-f .box-text {
   max-width: 600px;
 }
+ .box-section{
+  padding: 20px;
+  margin: 0 auto;
+  text-align: center;
+ }
 
 h3{
 text-align: left;
 padding: 20px 0px 0px 0px;
 }
 
-ul{
-  list-style-position: inside;
-
+ul {
+  padding-left: 20px; /* Controls distance between the bullet and text */
+  list-style-position: outside; /* Keeps the bullets outside of the list */
 }
 
-ul li{
-  list-style-type: circle;
+li {
+  margin-bottom: 10px; /* Adds spacing between items */
+  list-style-type: disc; /* Default bullet type, you can change it */
   text-align: left;
-  margin-left: 0; /* Reset any default margin */
-  padding-left: 20px; /* Adjust the padding to your desired value */
-  text-indent: -23px; /* Use negative text-indent to align the text with the first line */
 }
 
 /* Grid Styles */
@@ -202,6 +145,7 @@ ul li{
   line-height: 1.2;
   text-align: center;
   text-decoration: none;
+  margin: 5px;
 }
 
 .btn-dark-outline {
@@ -211,7 +155,7 @@ ul li{
 
 .btn-dark-outline:hover,
 .btn-light-outline:hover {
-  background-color: rgba(0, 0, 0, 0.06);
+  background-color: #FF8C00;
 }
 
 .btn-light-outline {
@@ -281,12 +225,35 @@ ul li{
 }
 .py-md {
   padding: 20px 0;
+   margin-top: 30px;
 }
 .py-lg {
   padding: 40px 0;
 }
 
+.grid-col-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+  gap: 2rem;
+  align-items: center;
+}
 
+.img-profile-container {
+  text-align: center;
+}
+
+.img-profile-container img {
+  width: 50%;
+  height: auto;
+  border-radius: 10px; /* Optional: add some border-radius for styling */
+}
+
+.img-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* Optional: add some border-radius for styling */
+
+}
 
 @media (max-width: 960px) {
   .text-xl {
