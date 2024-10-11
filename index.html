@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="timeline.css">
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="slider.css">
     <link rel="icon" href="images/favicon.ico"/>
     <title>David Raya</title>
   </head>
@@ -23,16 +24,150 @@
           <p class="text-md">
             I’m David Raya, a recent software engineering grad with a passion for bringing ideas to life, 
             whether it’s building space simulators in C++ or creating user-friendly apps with JavaScript.
-            I’m particularly drawn to Object-Oriented Programming and have eagerly delved into backend 
-            development using Java and Spring.
+            I’m particularly drawn to Object-Oriented Programming for its emphasis on reusability and the simplification of complex systems.
           </p>
         </div>
 
       </div>
     </section>
 
+    <h1 class="text-title pro-exp-title">Projects</h1>
+
+
+    <!-- Box TMA -->
+    <section class="box grid-col-2 bg-primary">
+
+      <div class="box-text">
+        <div class="box-section">
+          <h2 class="text-xl">React Native App</h2>
+          <p class="text-md">
+            A Task Managing App inpired in cleaning tasks assign to student at school univieristy housing.
+          </p>
+        </div>
+        <div class="box-section">
+          <p>Technologies used: React Native, Supabase</p>
+          <div class="detail-box">
+            <h3>Details</h3>
+            <ul>
+              <li>Created multiple functional components to create a simple app</li>
+              <li>Supabase is BaaS that simplified the development of this app</li>
+            </ul>
+          </div>
+          <a href="https://github.com/davraya/Orbital-Simulator" class="btn btn-light-outline">View source code</a>
+        </div>
+      </div>    
+
+      <div class="slideshow">
+
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <img src="img/app_assignment.jpg">
+          </div>
+          <div class="mySlides">
+            <img src="img/app_tasks.jpg">
+          </div>
+          <div class="mySlides fade">
+            <img src="img/app_members.jpg">
+          </div>
+          <div class="mySlides">
+            <img src="img/app_group.jpg">
+          </div>
+          <div class="mySlides fade">
+            <img src="img/app_login.jpg">
+          </div>
+          <div class="mySlides">
+            <img src="img/app_drawer.jpg">
+          </div>
+        </div>
+
+        <div class="dot-container">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+          <span class="dot" onclick="currentSlide(4)"></span> 
+          <span class="dot" onclick="currentSlide(5)"></span> 
+          <span class="dot" onclick="currentSlide(6)"></span> 
+        </div>
+
+      </div>
+          
+    
+      
+    </section>
+
+    
+    <!-- Box Lunar -->
+    <section class="box bg-primary grid-col-2">
+
+      <div class="img-container">
+        <img src="img/lunar.png" alt="" />
+      </div>
+      
+      <div class="box-text">
+        <div class="box-section">
+          <h2 class="text-xl">Lunar Landing Simulator</h2>
+          <p class="text-md">
+            Land the Apollo lunar module on the Moon, navigating treacherous terrain and ensuring a safe return to Earth, all while making history in human space exploration!
+          </p>
+          <p>Technologies used: C++ and OpenGL</p>
+        </div>
+        
+        <div class="box-section">
+
+          <div class="detail-box">
+            <h3>Details</h3>
+            <ul>
+              <li>Use of object-oriented principles such as encapsulation and abstraction</li>
+              <li>Created unit tests for different parts of the program</li>
+            </ul>
+          </div>
+          
+          <a href="https://www.youtube.com/watch?v=WqGN8ePAXmY" class="btn btn-light-outline">View video demo</a>
+          <a href="https://github.com/davraya/Lunar-Landing-Simulator" class="btn btn-light-outline">View source code</a>
+        </div>
+        
+      </div>
+      
+    </section>
+
+    <!-- Box Orbital -->
+    <section class="box bg-primary grid-col-2 grid-reversed">
+
+      <div class="img-container">
+        <img src="img/orbital.png" alt="" />
+      </div>
+      
+      <div class="box-text">
+        <div class="box-section">
+          <h2 class="text-xl">Orbital Simulator</h2>
+          <p class="text-md">
+            Track and destroy rogue satellites before they cause chaos in orbit, protecting Earth’s space infrastructure with precision strikes.
+          </p>
+        </div>
+        
+        <div class="box-section">
+          <p>Technologies used: C++ and OpenGL</p>
+
+          <div class="detail-box">
+            <h3>Details</h3>
+            <ul>
+              <li>Use of object-oriented principles such as encapsulation, inheritance, and polymorphism</li>
+              <li>Created unit tests for different parts of the program</li>
+            </ul>
+          </div>
+          
+          <a href="https://www.youtube.com/watch?v=SYIAJIjln98" class="btn btn-light-outline">View video demo</a>
+          <a href="https://github.com/davraya/Orbital-Simulator" class="btn btn-light-outline">View source code</a>
+        </div>
+        
+      </div>
+
+    </section>
+
+
+    
     <div class="timeline">
-      <h1 class="text-xl pro-exp-title">Professional Experience</h1>
+      <h1 class="text-title pro-exp-title">Professional Experience</h1>
       <ul>
           <li style="--accent-color:#9BC53D">
               <div class="date tx">QA Engineer Intern</div>
@@ -78,71 +213,7 @@
 
     </div>
 
-    <!-- Box C -->
-    <section class="box box-c bg-primary grid-col-2 grid-reversed">
-
-      <div class="img-container">
-        <img src="img/orbital.png" alt="" />
-      </div>
-      
-      <div class="box-text">
-        <div class="box-section">
-          <h2 class="text-xl">Orbital Simulator</h2>
-          <p class="text-md">
-            A school assignment that simulates satellites orbiting around Earth and a space ship that can shoot and destroy such satellites.
-          </p>
-        </div>
-        
-        <div class="box-section">
-          <p>Technologies used: C++ and OpenGL</p>
-
-          <div class="detail-box">
-            <h3>Details</h3>
-            <ul>
-              <li>Use of object-oriented principles such as encapsulation, inheritance, and polymorphism</li>
-              <li>Created unit tests for different parts of the program</li>
-            </ul>
-          </div>
-          
-          <a href="https://www.youtube.com/watch?v=SYIAJIjln98" class="btn btn-light-outline">View video demo</a>
-          <a href="https://github.com/davraya/Orbital-Simulator" class="btn btn-light-outline">View source code</a>
-        </div>
-        
-      </div>
-    </section>
-
-    <!-- Box D -->
-    <section class="box box-d bg-primary grid-col-2">
-
-      <div class="img-container">
-        <img src="img/lunar.png" alt="" />
-      </div>
-      
-      <div class="box-text">
-        <div class="box-section">
-          <h2 class="text-xl">Lunar Landing Simulator</h2>
-          <p class="text-md">
-            A school assignment that simulates the Apollo mission.
-          </p>
-          <p>Technologies used: C++ and OpenGL</p>
-        </div>
-        
-        <div class="box-section">
-
-          <div class="detail-box">
-            <h3>Details</h3>
-            <ul>
-              <li>Use of object-oriented principles such as encapsulation and abstraction</li>
-              <li>Created unit tests for different parts of the program</li>
-            </ul>
-          </div>
-          
-          <a href="https://www.youtube.com/watch?v=WqGN8ePAXmY" class="btn btn-light-outline">View video demo</a>
-          <a href="https://github.com/davraya/Lunar-Landing-Simulator" class="btn btn-light-outline">View source code</a>
-        </div>
-        
-      </div>
-    </section>
+    
 
     <footer class="footer">
       <div class="footer-container">
