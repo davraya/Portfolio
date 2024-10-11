@@ -177,6 +177,7 @@ padding: 20px 0px 0px 0px;
 .bg-primary {
   background-color: var(--color-primary);
   color: #fff;
+  border: 1px  solid #363e4a;
 }
 .bg-secondary {
   background-color: var(--color-secondary);
