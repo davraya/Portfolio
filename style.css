@@ -4,23 +4,22 @@
   --color-primary: #222831;
   --color-secondary: #344955;
   --color-extra: #d4e9e2;
+  --color: rgb(255, 255, 255);
+  --bgColor:  #222831;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
-html,
-body {
+body, html {
   font-family: 'Open Sans', sans-serif;
-  line-height: 1.4;
-  color: #000;
   background-color: #222426;
-  padding-left: 10px;
-  padding-right: 10px;
+  height: 100%; /* Full height */
+  width: 100%;  /* Full width */
+  margin: 0;    /* Remove default margin */
+  padding: 0;   /* Remove default padding */
+  
 }
+
+
 
 a {
   color: #000;
@@ -42,37 +41,11 @@ section a {
 }
 
 
-
-/* Footer & Social */
-.footer-container {
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 30px 30px;
-}
-
-.social {
-  display: flex;
-  align-items: center;
-  margin: 20px 0;
-}
-
-.social img {
-  width: 35px;
-  height: 35px;
-}
-
-.social a {
-  text-decoration: none;
-  margin-right: 20px;
-}
-
-
 /* Box */
 .box {
-  margin-bottom: 30px;
   border-radius: 15px;
   padding: 20px;
+  margin: 35px 40px;
 }
 
 .box-inner {
@@ -84,8 +57,7 @@ section a {
   max-width: 500px;
   text-align: center;
   justify-self: center;
-  padding: 20px 0;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 
 .box-text .btn {
@@ -98,7 +70,7 @@ section a {
  .box-section{
   padding: 20px;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
  }
 
 h3{
@@ -107,22 +79,25 @@ padding: 20px 0px 0px 0px;
 }
 
 .detail-box ul {
-  padding-left: 20px; /* Controls distance between the bullet and text */
+  padding-left: 42px; /* Controls distance between the bullet and text */
   list-style-position: outside; /* Keeps the bullets outside of the list */
 }
 
 .detail-box ul li {
-  margin-bottom: 10px; /* Adds spacing between items */
+  /* padding-left: 20px; */
+  padding-bottom: 10px; /* Adds spacing between items */
   list-style-type: disc; /* Default bullet type, you can change it */
   text-align: left;
+
 }
 
 /* Layout Styles */
 .grid-col-2 {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+  gap: 1rem;
   align-items: center;
+  width: auto;
   justify-content: space-between;
 }
 
@@ -198,11 +173,13 @@ padding: 20px 0px 0px 0px;
 }
 
 .text-title {
-  font-size: 50px;
+  font-size: 47px;
   text-transform: uppercase;
   letter-spacing: 6px;
   font-weight: 600;
-  margin-bottom: 20px;
+  padding: 20px;
+  color: #fff;
+  margin: 0;
 }
 
 .text-xl {
@@ -210,7 +187,7 @@ padding: 20px 0px 0px 0px;
   text-transform: uppercase;
   letter-spacing: 6px;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin: 0px;
 }
 
 .text-lg {
@@ -235,25 +212,19 @@ padding: 20px 0px 0px 0px;
 }
 .py-md {
   padding: 20px 0;
-   margin-top: 30px;
 }
 .py-lg {
   padding: 40px 0;
 }
 
-.grid-col-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Two equal-width columns */
-  gap: 2rem;
-  align-items: center;
-  width: 100%;
-}
+
 
 .img-profile-container {
   text-align: center;
 }
 
 .img-profile-container img {
+  max-width: 100%;
   width: 50%;
   height: auto;
   border-radius: 10px; /* Optional: add some border-radius for styling */
@@ -298,8 +269,6 @@ padding: 20px 0px 0px 0px;
 
 @media (min-width: 1440px) {
   .box {
-    max-width: 1440px;
-    margin-right: auto;
-    margin-left: auto;
+
   }
 }
