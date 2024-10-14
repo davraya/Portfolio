@@ -265,6 +265,10 @@ padding: 20px 0px 0px 0px;
   .footer {
     text-align: center;
   }
+  
+  .box{
+    margin: 35px 20px;
+  }
 }
 
 @media (min-width: 1440px) {
