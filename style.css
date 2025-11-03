@@ -8,6 +8,10 @@
   --bgColor:  #222831;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 
 body, html {
   font-family: 'Open Sans', sans-serif;
@@ -16,6 +20,7 @@ body, html {
   width: 100%;  /* Full width */
   margin: 0;    /* Remove default margin */
   padding: 0;   /* Remove default padding */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
   
 }
 
@@ -46,6 +51,8 @@ section a {
   border-radius: 15px;
   padding: 20px;
   margin: 35px 40px;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .box-inner {
@@ -91,6 +98,79 @@ padding: 20px 0px 0px 0px;
 
 }
 
+/* Skills Section */
+.skills-section {
+  text-align: left;
+}
+
+.skills-list {
+  list-style-type: disc;
+  padding-left: 40px;
+  margin: 0;
+}
+
+.skills-list li {
+  padding-bottom: 12px;
+  line-height: 1.8;
+  color: #fff;
+}
+
+.skills-list li strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Skills Icons section - outside card */
+.skills-grid-wrapper {
+  margin: 20px 40px;
+  text-align: center;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap; /* allow wrapping to next line when needed */
+  gap: 14px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 10px 0 10px;
+  overflow-x: visible;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  flex: 0 0 auto;
+}
+
+.skill-item i {
+  font-size: 32px;
+  line-height: 1;
+}
+
+/* Force IntelliJ icon to monochrome white */
+.devicon-intellij-plain {
+  color: #ffffff;
+}
+
+.skill-item span {
+  margin-top: 4px;
+  font-size: 12px;
+}
+
+@media (max-width: 960px) {
+  .skills-grid {
+    grid-template-columns: repeat(5, minmax(60px, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .skills-grid {
+    grid-template-columns: repeat(4, minmax(60px, 1fr));
+  }
+}
+
 /* Layout Styles */
 .grid-col-2 {
   display: grid;
@@ -131,7 +211,7 @@ padding: 20px 0px 0px 0px;
 
 .btn-dark-outline:hover,
 .btn-light-outline:hover {
-  background-color: #FF8C00;
+  background-color: #4A9BCD;
 }
 
 .btn-light-outline {
@@ -219,22 +299,20 @@ padding: 20px 0px 0px 0px;
 
 
 
+
 .img-profile-container {
-  text-align: center;
+  height: 100%; /* Ensures the container fills the height of its parent */
+  display: flex; /* Enables flexbox for alignment */
+  align-items: center; /* Centers content vertically */
+  justify-content: center; /* Centers content horizontally */
 }
 
 .img-profile-container img {
-  max-width: 100%;
-  width: 50%;
-  height: auto;
-  border-radius: 10px; /* Optional: add some border-radius for styling */
-}
-
-.img-container img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px; /* Optional: add some border-radius for styling */
-
+  max-height: 100%; /* Ensures the image scales to fit the container's height */
+  width: auto; /* Maintains aspect ratio */
+  max-width: 150px; /* Prevents the image from becoming too wide */
+  border-radius: 10px; /* Optional: Adds a border-radius for styling */
+  object-fit: cover; /* Ensures the image covers the container nicely */
 }
 
 @media (max-width: 960px) {
@@ -268,11 +346,7 @@ padding: 20px 0px 0px 0px;
   
   .box{
     margin: 35px 20px;
+    max-width: calc(100% - 40px);
   }
 }
 
-@media (min-width: 1440px) {
-  .box {
-
-  }
-}

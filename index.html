@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="timeline.css">
     <link rel="stylesheet" href="slider.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
     <link rel="icon" href="images/favicon.ico"/>
     <title>David Raya</title>
   </head>
@@ -23,19 +24,108 @@
         <div>
           <h2 class="text-xl">About Me</h2>
           <p class="text-md">
-            I’m David Raya, a recent software engineering grad with a passion for bringing ideas to life, 
-            whether it’s building space simulators in C++ or creating user-friendly apps with JavaScript.
+            I’m David Raya, a software engineer with a passion for bringing ideas to life. Whether it’s developing web applications, mobile apps, or space simulators, I’m always looking for new challenges and opportunities to learn and grow.
           </p>
         </div>
 
       </div>
     </section>
 
+    <!-- Skills Icons (no card) -->
+    <div class="skills-grid-wrapper">
+      <div class="skills-grid">
+        <div class="skill-item"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+        <div class="skill-item"><i class="devicon-java-plain colored"></i><span>Java</span></div>
+        <div class="skill-item"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+        <div class="skill-item"><i class="devicon-react-original colored"></i><span>React</span></div>
+        <div class="skill-item"><i class="devicon-spring-plain colored"></i><span>Spring Boot</span></div>
+        <div class="skill-item"><i class="devicon-mysql-plain colored"></i><span>SQL</span></div>
+        <div class="skill-item"><i class="devicon-cplusplus-plain colored"></i><span>C++</span></div>
+        <div class="skill-item"><i class="devicon-selenium-original colored"></i><span>Selenium</span></div>
+        <div class="skill-item"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+        <div class="skill-item"><i class="devicon-vscode-plain colored"></i><span>VS Code</span></div>
+        <div class="skill-item"><i class="devicon-intellij-plain"></i><span>IntelliJ</span></div>
+        <div class="skill-item"><i class="devicon-postman-plain colored"></i><span>Postman</span></div>
+      </div>
+    </div>
+
     <h1 class="text-title">Projects</h1>
 
+    <!-- Box Dev Journey -->
+    <section class="box bg-primary grid-col-2">
 
+      <div class="box-text">
+        <div class="box-section">
+          <h2 class="text-xl">Dev Journey</h2>
+          <p class="text-md">
+            A web app to set goals, track job applications, and reflect on your coding journey.
+          </p>
+        </div>
+        <div class="box-section">
+          <p>Technologies used: Spring Boot, React, MongoDB</p>
+          <div class="detail-box">
+            <h3>Details</h3>
+            <ul>
+              <li>Designed and implemented RESTful endpoints in Spring Boot to manage users, goals, and application tracking.</li>
+              <li>Built a responsive React interface that allows users to set goals, log progress, and review their development journey.</li>
+              <li>Implemented Google OAuth authentication and secured data access between the front-end and back-end.</li>
+
+            </ul>
+          </div>
+          <a href="https://davraya.github.io/DevJourneyFE/#/" class="btn btn-light-outline" target="_blank" rel="noopener noreferrer">Live Demo</a>
+          <a href="https://github.com/davraya/DevJourneyFE" class="btn btn-light-outline" target="_blank" rel="noopener noreferrer">Front End Code</a>
+          <a href="https://github.com/davraya/DevJourneyBE" class="btn btn-light-outline" target="_blank" rel="noopener noreferrer">Back End Code</a>
+        </div>
+      </div>    
+
+      <div class="slideshow">
+
+        <div class="slideshow-container">
+          <!-- Desktop images -->
+          <div class="mySlidesDev mySlidesDev-desktop fade">
+            <img src="img/devj1.png">
+          </div>
+          <div class="mySlidesDev mySlidesDev-desktop">
+            <img src="img/devj2.png">
+          </div>
+          <div class="mySlidesDev mySlidesDev-desktop fade">
+            <img src="img/devj3.png">
+          </div>
+          <!-- Mobile images -->
+          <div class="mySlidesDev mySlidesDev-mobile">
+            <img src="img/devj-mobile1.jpg">
+          </div>
+          <div class="mySlidesDev mySlidesDev-mobile">
+            <img src="img/devj-mobile2.jpg">
+          </div>
+          <div class="mySlidesDev mySlidesDev-mobile">
+            <img src="img/devj-mobile3.jpg">
+          </div>
+          <div class="mySlidesDev mySlidesDev-mobile">
+            <img src="img/devj-mobile4.jpg">
+          </div>
+          <div class="mySlidesDev mySlidesDev-mobile">
+            <img src="img/devj-mobile5.jpg">
+          </div>
+        </div>
+
+        <div class="dot-container">
+          <span class="dotDev dotDev-desktop" onclick="currentSlideDev(1)"></span> 
+          <span class="dotDev dotDev-desktop" onclick="currentSlideDev(2)"></span> 
+          <span class="dotDev dotDev-desktop" onclick="currentSlideDev(3)"></span> 
+          <span class="dotDev dotDev-mobile" onclick="currentSlideDevMobile(1)"></span> 
+          <span class="dotDev dotDev-mobile" onclick="currentSlideDevMobile(2)"></span> 
+          <span class="dotDev dotDev-mobile" onclick="currentSlideDevMobile(3)"></span> 
+          <span class="dotDev dotDev-mobile" onclick="currentSlideDevMobile(4)"></span> 
+          <span class="dotDev dotDev-mobile" onclick="currentSlideDevMobile(5)"></span> 
+        </div>
+
+      </div>
+          
+    </section>
+ 
     <!-- Box TMA -->
-    <section class="box grid-col-2 bg-primary">
+    <section class="box grid-col-2 bg-primary grid-reversed">
 
       <div class="box-text">
         <div class="box-section">
@@ -97,7 +187,7 @@
 
     
     <!-- Box Lunar -->
-    <section class="box bg-primary grid-col-2">
+    <section class="box bg-primary grid-col-2 grid-reversed">
 
       <div class="img-container">
         <img src="img/lunar.png" alt="" />
@@ -131,7 +221,7 @@
     </section>
 
     <!-- Box Orbital -->
-    <section class="box bg-primary grid-col-2 grid-reversed">
+    <section class="box bg-primary grid-col-2">
 
       <div class="img-container">
         <img src="img/orbital.png" alt="" />
@@ -170,59 +260,53 @@
       <h1 class="text-title pro-exp-title">Experience</h1>
       <ul>
         <li style="--accent-color:#337BA9">
-          <div class="date">AI Code Training & Evaluation Specialist</div>
-          <div class="title">October 2024 – Present</div>
+          <div class="title">AI Code Trainer</div>
+          <div class="company">Outlier</div>
+          <div class="date">October 2024 – Present</div>
           <div class="descr">
+            <p>Evaluate and improve AI-generated code achieving an average reviewer rating of 4.5/5 for code quality and improvements.</p>
             <p>Design and refine prompts to optimize AI-generated code responses.</p>
-            <p>Evaluate and improve AI-generated code by ensuring accuracy, efficiency, and adherence to coding standards.</p>
-            <p>Review and provide feedback on collaborators’ tasks, focusing on code quality and correctness </p>
 
           </div>
           <li style="--accent-color:#FBCA3E">
-            <div class="date">Teaching Assistant </div>
-            <div class="title">January 2023 - July 2024</div>
+            <div class="title">CS Teaching Assistant</div>
+            <div class="company">Brigham Young University – Idaho</div>
+            <div class="date">January 2023 – July 2024</div>
             <div class="descr">
-              <p>Supported 50+ students, breaking down programming principles and guiding them through project application.</p>
-              <p>Assessed 1,000+ assignments with a structured rubric, delivering constructive feedback to enhance student learning .</p>
-              <p>Led 30+ class workshops, guiding students through projects and assignments to enhance their understanding and skills.</p>
+              <p>Supported 50 students, breaking down programming principles and guiding them through project application.</p>
+              <p>Assessed 1000 assignments with structured rubric, delivering constructive feedback to enhance student learning.</p>
+              <p>Led 30 class workshops, guiding students through projects and assignments to ensure a successful learning experience.</p>
             </div>
           </li>
         </li>
           <li style="--accent-color:#9BC53D">
-              <div class="date tx">QA Engineer Intern</div>
-              <div class="title">January 2024 – April 2024</div>
+              <div class="title tx">Software Quality Assurance Intern</div>
+              <div class="company">The Church of Jesus Christ of Latter-day Saints</div>
+              <div class="date">January 2024 – April 2024</div>
               <div class="descr">
-                <p>Created and executed test plans for cloud-based applications, ensuring alignment with requirements, design documents, user stories, and acceptance criteria.</p>
-                <p>Used JIRA to create bug tickets and collaborate with developers to validate fixes.</p>
-                <p>Conducted regression testing, ensuring new features did not disrupted existing the existing system.</p>
-                <p>Participated in daily standups, sprint reviews, sprint meetings, and planning sessions to ensure effective team collaboration and project progress.</p>
+                <p>Created and executed 200 software test cases for cloud-based applications, ensuring compliance with system requirements, design documents, user stories, and acceptance criteria.</p>
+                <p>Prepared detailed test reports to document findings providing actionable insights for system improvements.</p>
+                <p>Created 40 JIRA bug tickets and collaborate with developers to validate fixes.</p>
                 <p>Conducted data evaluations between legacy systems and the Dataverse, ensuring seamless data migration and integrity in the new cloud-based application.</p>
               </div>
           </li>
           <li style="--accent-color:#E24A68">
-              <div class="date">Systems Developer</div>
-              <div class="title">September 2022 – March 2023</div>
+              <div class="title">Systems Developer</div>
+              <div class="company">BYU – Idaho Support Center</div>
+              <div class="date">September 2022 – March 2023</div>
               <div class="descr">
-                <p>Analyzed and resolved defects in the Java Spring Boot API to enhance system stability.</p>
-                <p>Designed and implemented iPaaS workflows using a no-code/low-code interface, incorporating JavaScript for advanced logic and data manipulation.</p>
-                <p>Improved a chatbot by organizing flow structures and enhancing response accuracy.</p>
-                <p>Operated IT service management software with admin access, automating workflows, managing user permissions, generating detailed reports, customizing dashboards, and updating ticket templates.</p>
+                <p>Analyzed and patched bugs in Java Spring Boot APIs to enhance system stability.</p>
+                <p>Tested endpoints using Postman to ensure correct implementation.</p>
+                <p>Designed and implemented iPaaS workflows by leveraging a no-code/low-code interface and incorporating JavaScript for advanced logic and data manipulation.</p>
+                <p>Streamlined chatbot flow, achieving a 30% increase in successful query resolutions.</p>
               </div>
           </li>
-          <li style="--accent-color:#1B5F8C">
-              <div class="date">CS Online Tutor</div>
-              <div class="title">January 2022 – July 2022</div>
-              <div class="descr">
-                <p>Conducted 200+ one-on-one session, increasing students’ comprehension and application of the course content .</p>
-                <p>Fostered a personal connection with students by identifying their individual needs and providing a safe space for learning .</p>
-
-              </div>
-          </li>
+          
       </ul>
 
     </div>
 
-    
+
 
     <footer class="footer">
 

@@ -6,10 +6,21 @@
     height: 100%;
 }
 
+/* Dev Journey specific container - allow it to grow larger (desktop only) */
+@media (min-width: 769px) {
+    .slideshow:has(.mySlidesDev) .slideshow-container {
+        height: auto;
+        /* Make container adapt to grid column width on medium screens */
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
 .mySlides {
     height: 100%;
     text-align: center;
     max-width: 100%;
+    display: none;
 }
 
 .mySlides img {
@@ -18,9 +29,27 @@
     max-height: 600px;
     max-width: 277px;
     border-radius: 8px;
-
+    object-fit: contain;
 }
 
+/* Dev Journey Slideshow */
+.mySlidesDev {
+    height: auto;
+    text-align: center;
+    max-width: none;
+    display: none;
+}
+
+.mySlidesDev img {
+    /* Scale image to fit its column on medium/desktop */
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100% !important;
+    max-height: 75vh !important;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
 
 /* Dot */
 
@@ -37,8 +66,65 @@
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
+    cursor: pointer;
 }
 
-.active, .dot:hover {
+.dotDev {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #717171;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    cursor: pointer;
+}
+
+.active, .dot:hover, .dotDev:hover {
     background-color: #bbb;
+}
+
+/* Mobile view - show mobile slides, hide desktop slides */
+@media (max-width: 768px) {
+    .mySlidesDev-desktop {
+        display: none !important;
+    }
+    
+    .dotDev-desktop {
+        display: none !important;
+    }
+    
+    .mySlidesDev-mobile {
+        height: 100% !important;
+        text-align: center !important;
+        max-width: 100% !important;
+        display: none;
+    }
+    
+    .mySlidesDev-mobile img {
+        width: 100% !important;
+        height: 100% !important;
+        max-height: 600px !important;
+        max-width: 277px !important;
+        border-radius: 8px !important;
+        object-fit: contain !important;
+    }
+    
+    /* Reset container for mobile - match React Native slideshow */
+    .slideshow:has(.mySlidesDev) .slideshow-container {
+        height: 100%;
+        max-width: 277px;
+        margin: auto;
+    }
+}
+
+/* Desktop view - show desktop slides, hide mobile slides */
+@media (min-width: 769px) {
+    .mySlidesDev-mobile {
+        display: none !important;
+    }
+    
+    .dotDev-mobile {
+        display: none !important;
+    }
 }
